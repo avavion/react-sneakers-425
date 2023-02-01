@@ -1,0 +1,180 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f7fbfe;
+  font-family: "Inter", "sans-serif";
+  font-size: 16px;
+}
+
+.layout {
+  max-width: 70vw;
+  margin: 0 auto;
+
+  margin-top: 96px;
+
+  background-color: #ffffff;
+
+  padding: 24px 48px;
+
+  border-radius: 24px 24px 0 0;
+
+  min-height: 100vh;
+}
+
+main {
+  padding-top: 42px;
+}
+
+.header {
+  margin: 0 -48px;
+
+  padding: 0 48px 24px 48px;
+
+  border-bottom: 1px solid #eaeaea;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  .nav {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+
+    a,
+    button {
+      border: none;
+      outline: none;
+
+      background-color: transparent;
+
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 17px;
+      color: #9b9b9b;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      text-decoration: none;
+
+      gap: 10px;
+
+      cursor: pointer;
+    }
+  }
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+
+  gap: 16px;
+
+  font-family: "Inter";
+  font-style: normal;
+
+  h1 {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #000000;
+  }
+
+  p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #9d9d9d;
+  }
+}
+
+// Slider
+
+.slider {
+  position: relative;
+
+  .controls {
+    position: absolute;
+
+    top: 50%;
+    left: 0;
+    right: 0;
+
+    transform: translateY(-50%);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    button {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+
+      --size: 35px;
+
+      width: var(--size);
+      height: var(--size);
+
+      border-radius: 50%;
+
+      border: none;
+      outline: none;
+
+      background-color: #fff;
+
+      color: #c8c8c8;
+      cursor: pointer;
+
+      &.prev {
+        margin-left: calc(var(--size) / -2);
+      }
+
+      &.next {
+        margin-right: calc(var(--size) / -2);
+      }
+    }
+  }
+
+  .slide {
+    display: flex;
+    align-items: center;
+
+    min-height: 400px;
+    max-height: 400px;
+
+    border-radius: 20px;
+    overflow: hidden;
+
+    .part {
+      flex: 1;
+
+      padding: 24px 0 24px 48px;
+    }
+
+    img {
+      flex: 3;
+
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+    }
+  }
+}
