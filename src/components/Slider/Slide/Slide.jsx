@@ -11,7 +11,7 @@ const Slide = () => {
                     Stan Smith,<br />Forever!
                 </h2>
 
-                <NavLink to="/">
+                <NavLink className="button button--xl" to="/">
                     Купить
                 </NavLink>
             </div>
