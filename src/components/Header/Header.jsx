@@ -1,11 +1,19 @@
+import { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../../assets/logo.png";
+import { CartContext, ModalContext } from "../../pages/Root";
+import formatMoney from "../../utils/formatMoney";
 
-const CardButton = () => {
+const CartButton = () => {
+    const { toggleModal } = useContext(ModalContext);
+    const { cartItems } = useContext(CartContext);
+
+    const cartTotal = cartItems.reduce((prev, current) => prev += current.price, 0);
+
     return (
-        <button>
+        <button onClick={toggleModal}>
             <i class="fa-solid fa-cart-shopping"></i>
-            <span>1205 руб.</span>
+            <span>{formatMoney(cartTotal)}</span>
         </button>
     )
 };
@@ -26,7 +34,7 @@ const Header = () => {
             </NavLink>
 
             <nav className="nav">
-                <CardButton />
+                <CartButton />
                 <NavLink to="/favorites">
                     <i class="fa-solid fa-heart"></i>
                 </NavLink>

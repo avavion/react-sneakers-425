@@ -292,6 +292,13 @@ main {
   grid-template-columns: repeat(4, 1fr);
   gap: 40px;
   margin-top: 40px;
+
+  h2 {
+    text-align: center;
+    color: #C4C4C4;
+    grid-column: 2 / 4;
+    align-self: center;
+  }
 }
 
 .product {
@@ -403,6 +410,162 @@ main {
       justify-content: center;
 
       border: 1px solid #F8F8F8;
+    }
+  }
+}
+
+
+// Modal
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.3);
+
+  visibility: hidden;
+  opacity: 0;
+
+  animation-name: fadeOut;
+  animation-duration: 300ms;
+  animation-iteration-count: 1;
+
+  &.active {
+    visibility: visible;
+    opacity: 1;
+
+    animation-name: fadeIn;
+    animation-duration: 300ms;
+    animation-iteration-count: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.modal {
+  display: grid;
+
+  gap: 30px;
+
+  grid-template-rows: 0.25fr 4.75fr 1fr;
+
+  position: absolute;
+
+  top: 0;
+  bottom: 0;
+
+  right: 0;
+
+  max-width: 25vw;
+  width: 100%;
+
+  background-color: #fff;
+
+  padding: 32px 30px 30px 30px;
+
+  &-header {
+    h2 {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 29px;
+      color: #000000;
+    }
+  }
+
+  &-body {
+    overflow-y: scroll;
+  }
+
+  &-footer {}
+}
+
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .cart-item {
+    border: 1px solid #F3F3F3;
+    border-radius: 20px;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    button {
+      border: none;
+      outline: none;
+
+      background-color: #fff;
+
+      --size: 32px;
+
+      width: var(--size);
+      height: var(--size);
+
+      cursor: pointer;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border: 1px solid #F8F8F8;
+    }
+
+    .cart-item__content {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+
+      font-size: 14px;
+      line-height: 17px;
+      color: #000000;
+
+      .price {
+        font-weight: 700;
+      }
+
+      h4 {
+        font-weight: 400;
+      }
+    }
+
+    img {
+      max-width: 70px;
+      max-height: 70px;
+      min-height: 70px;
+      min-width: 70px;
+
+      object-fit: contain;
+
+      width: 100%;
+      height: 100%;
     }
   }
 }

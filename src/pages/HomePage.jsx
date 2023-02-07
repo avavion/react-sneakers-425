@@ -1,7 +1,6 @@
 import { useState } from "react";
 import PRODUCTS from "../data/products";
 import { SearchIcon } from "../components/Icons/Icons";
-import Slide from "../components/Slider/Slide/Slide";
 import Slider from "../components/Slider/Slider";
 import Product from "../components/Product/Product";
 
@@ -18,9 +17,7 @@ const HomePage = () => {
 
     return (
         <>
-            <Slider>
-                <Slide />
-            </Slider>
+            <Slider />
 
             <section className="section">
                 <header className="section-header">
