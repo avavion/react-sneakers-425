@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import PRODUCTS from "../data/products";
 import { SearchIcon } from "../components/Icons/Icons";
 import Slider from "../components/Slider/Slider";
 import Product from "../components/Product/Product";
+import { FavoritesContext } from "./Root";
 
 const HomePage = () => {
     const [products, setProducts] = useState(PRODUCTS);
@@ -13,7 +14,6 @@ const HomePage = () => {
     const onChangeQuery = (event) => {
         setQuery(event.target.value);
     }
-
 
     return (
         <>
