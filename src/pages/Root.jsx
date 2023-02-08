@@ -6,13 +6,13 @@ import PRODUCTS from "../data/products";
 
 import useCart from "../hooks/useCart";
 
-export const ModalContext = createContext(null);
-export const CartContext = createContext(null);
+export const ModalContext = createContext({});
+export const CartContext = createContext({});
 
 const Root = () => {
     const [isModalActive, setIsModalActive] = useState(false);
 
-    const cart = useCart(PRODUCTS);
+    const cart = useCart([]);
 
     const toggleModal = setIsModalActive.bind(this, !isModalActive);
 

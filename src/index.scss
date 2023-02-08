@@ -181,7 +181,7 @@ main {
       padding: 24px 0 24px 48px;
 
       h2 {
-        font-family: 'Inter';
+        font-family: "Inter";
         font-style: normal;
         font-weight: 700;
         font-size: 38px;
@@ -216,10 +216,10 @@ main {
   align-items: center;
   justify-content: center;
 
-  background-color: #A5D364;
+  background-color: #a5d364;
   color: #fff;
 
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 600;
   font-size: 16px;
   line-height: 19px;
@@ -244,7 +244,7 @@ main {
     justify-content: space-between;
 
     h2 {
-      font-family: 'Inter';
+      font-family: "Inter";
       font-style: normal;
       font-weight: 700;
       font-size: 32px;
@@ -260,7 +260,7 @@ main {
   align-items: center;
   justify-content: center;
 
-  border: 1px solid #F3F3F3;
+  border: 1px solid #f3f3f3;
   border-radius: 10px;
 
   padding: 16px 18px;
@@ -275,12 +275,12 @@ main {
   }
 
   input {
-    font-family: 'Inter';
+    font-family: "Inter";
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 17px;
-    color: #C4C4C4;
+    color: #c4c4c4;
 
     border: none;
     outline: none;
@@ -295,7 +295,7 @@ main {
 
   h2 {
     text-align: center;
-    color: #C4C4C4;
+    color: #c4c4c4;
     grid-column: 2 / 4;
     align-self: center;
   }
@@ -309,7 +309,7 @@ main {
 
   position: relative;
 
-  border: 1px solid #F3F3F3;
+  border: 1px solid #f3f3f3;
   border-radius: 24px;
 
   padding: 30px 30px 32px 30px;
@@ -346,7 +346,7 @@ main {
       align-items: center;
       justify-content: center;
 
-      border: 1px solid #F8F8F8;
+      border: 1px solid #f8f8f8;
     }
 
     .price {
@@ -355,17 +355,17 @@ main {
       gap: 2px;
 
       .text {
-        font-family: 'Inter';
+        font-family: "Inter";
         font-style: normal;
         font-weight: 500;
         font-size: 11px;
         line-height: 13px;
         text-transform: uppercase;
-        color: #BDBDBD;
+        color: #bdbdbd;
       }
 
       .value {
-        font-family: 'Inter';
+        font-family: "Inter";
         font-style: normal;
         font-weight: 700;
         font-size: 14px;
@@ -378,7 +378,7 @@ main {
   h3 {
     margin: 14px 0;
 
-    font-family: 'Inter';
+    font-family: "Inter";
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -409,11 +409,10 @@ main {
       align-items: center;
       justify-content: center;
 
-      border: 1px solid #F8F8F8;
+      border: 1px solid #f8f8f8;
     }
   }
 }
-
 
 // Modal
 
@@ -478,7 +477,7 @@ main {
 
   right: 0;
 
-  max-width: 25vw;
+  max-width: 385px;
   width: 100%;
 
   background-color: #fff;
@@ -487,7 +486,7 @@ main {
 
   &-header {
     h2 {
-      font-family: 'Inter';
+      font-family: "Inter";
       font-style: normal;
       font-weight: 700;
       font-size: 24px;
@@ -500,7 +499,48 @@ main {
     overflow-y: scroll;
   }
 
-  &-footer {}
+  &-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    .total {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+
+      .row {
+        display: flex;
+        flex-direction: row;
+
+        font-family: "Inter";
+        font-size: 16px;
+        line-height: 19px;
+        color: #000000;
+
+        span {
+          min-width: max-content;
+        }
+
+        .underline {
+          width: 100%;
+          border-bottom: 1px dashed #dfdfdf;
+        }
+
+        .text {
+          font-weight: 400;
+        }
+
+        .price {
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+
+.w100 {
+  width: 100%;
 }
 
 .cart-items {
@@ -509,7 +549,7 @@ main {
   gap: 20px;
 
   .cart-item {
-    border: 1px solid #F3F3F3;
+    border: 1px solid #f3f3f3;
     border-radius: 20px;
     padding: 20px;
 
@@ -535,7 +575,7 @@ main {
       align-items: center;
       justify-content: center;
 
-      border: 1px solid #F8F8F8;
+      border: 1px solid #f8f8f8;
     }
 
     .cart-item__content {

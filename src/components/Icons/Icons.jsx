@@ -42,7 +42,7 @@ export const PlusIcon = ({ size = 28, color = "#ECECEC" }) => {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="icon icon-tabler icon-tabler-plus"
+            className="icon icon-tabler icon-tabler-plus"
             width={size}
             height={size}
             viewBox="0 0 24 24"
